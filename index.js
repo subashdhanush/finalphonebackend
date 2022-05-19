@@ -93,6 +93,8 @@ const mongoose=require('mongoose')
 const User=require('./models/userModel')
 const jwt=require('jsonwebtoken')
 
+const PORT=process.env.PORT || 1337;
+
 app.use(cors())
 app.use(express.json())
 
@@ -161,7 +163,7 @@ app.post('/api/login',async(req,res)=>{
 
 
 
-app.listen(1337,()=>{
+app.listen(PORT,()=>{
 console.log("Server started on 1337")
 })
 
