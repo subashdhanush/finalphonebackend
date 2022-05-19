@@ -1,6 +1,7 @@
 const mongoose=require("mongoose")
 
-var mongoURL='mongodb+srv://subash_03:12345@cluster0.brumh.mongodb.net/test'
+// var mongoURL='mongodb+srv://subash_03:12345@cluster0.brumh.mongodb.net/test'
+var mongoURL=process.env.MONGO_URL
 
 mongoose.connect(mongoURL,{useUnifiedTopology:true,useNewUrlParser:true})
 
